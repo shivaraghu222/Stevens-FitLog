@@ -1,5 +1,5 @@
 // TODO: Export and implement the following functions in ES6 format
-import {user} from '../config/mongoCollections.js';
+import {users} from '../config/mongoCollections.js';
 import {ObjectId} from 'mongodb';
 export const create = async (
   username,
@@ -18,7 +18,7 @@ export const create = async (
     last_name
   };
 
-  const userCollection = await user();
+  const userCollection = await users();
   await userCollection.insertOne(user);
 
   return user;
@@ -26,7 +26,7 @@ export const create = async (
 };
 
 export const getAll = async () => {
-  const userCollection = await user();
+  const userCollection = await users();
   const cursor = await userCollection.find();
   const usersArray = await cursor.toArray();
   return usersArray;
@@ -40,7 +40,7 @@ export const get = async (id) => {
     throw new Er
   try {
     const objectId = new ObjectId(id);
-    const userCollection = await user();
+    const userCollection = await users();
     const user = await userCollection.findOne({ _id: objectId });
     if (!user) 
       throw new Error(`No band found with id ${id}`);
