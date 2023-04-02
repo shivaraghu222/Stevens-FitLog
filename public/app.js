@@ -5,7 +5,7 @@ import * as workout from "./data/workout.js";
 import * as fitnessProgress from "./data/fitnessProgress.js";
 
 const app = express();
-app.use(express.static('html'));
+app.use(express.static('public'));
 
 app.listen(8080, () => {
   console.log("We've now got a server!");
