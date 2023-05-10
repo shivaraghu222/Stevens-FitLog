@@ -1,11 +1,9 @@
 # Stevens-FitLog
 
-Workflow 
-1. Commit&Push your work to your branch.
-2. Create a PR(Pull Request) and Merge your branch to main.
-3. Switch to the main branch and pull so you can get updates from other collaborators.
-4. Create a new branch and start your new work...
-5. Back to 1.
-
-Do NOT write and push on main branch directly! Always work on a branch and merge after.
-Make sure to pull on main for changes before you start to work (creating a new branch).
+1. Open Visual Studio.
+2. Open the Stevens-Fitlog project.
+3. Select the backend only option.
+4. In the index.js file, open the terminal and type "npm i" to install the required dependencies.
+5. Once the installation is complete, type "node index" in the terminal to start the server.
+6. After connecting to the server, you will be directly connected to the Stevens-Fitlog website.
+7. Or else, Open a web browser and go to http://localhost:8000/ to access the Stevens-Fitlog website.
